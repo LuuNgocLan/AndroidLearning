@@ -12,7 +12,7 @@
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_title"
+        android:text="@string/textview.text.title"
         android:textSize="@dimen/text_size_medium"
         android:textColor="@color/colorWhite"
         android:background="@color/colorGreen"
@@ -27,12 +27,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_a"
+            android:text="@string/textview.text.number_first"
             android:textSize="@dimen/text_size_medium"
             android:textColor="@color/colorBlack"
             android:padding="@dimen/text_padding" />
         <EditText
-            android:id="@+id/edtNum_a"
+            android:id="@+id/edtNumberFirst"
             android:layout_weight="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,12 +47,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/txt_b"
+            android:text="@string/textview.text.number_second"
             android:textSize="@dimen/text_size_medium"
             android:textColor="@color/colorBlack"
             android:padding="@dimen/text_padding" />
         <EditText
-            android:id="@+id/edtNum_b"
+            android:id="@+id/edtNumberSecond"
             android:layout_weight="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/btnCalc"
+        android:text="@string/button.text"
         android:textSize="@dimen/text_size_medium"
         android:textStyle="bold"
         android:onClick="onClickFindSum"/>

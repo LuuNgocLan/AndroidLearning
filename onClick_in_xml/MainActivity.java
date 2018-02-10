@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void onClickFindSum(View view){
-        EditText edtNum_a = (EditText) findViewById(R.id.edtNum_a);
-        EditText edtNum_b = (EditText) findViewById(R.id.edtNum_b);
+        EditText edtNum_a = (EditText) findViewById(R.id.edtNumberFirst);
+        EditText edtNum_b = (EditText) findViewById(R.id.edtNumberSecond);
 
         int numFirst = Integer.parseInt(edtNum_a.getText()+"");
         int numSecond = Integer.parseInt(edtNum_b.getText()+"");
