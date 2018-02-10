@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Event</string>
+    <string name="textview.text.title">Các kiểu lập trình sự kiện</string>
+    <string name="textview.text.number_first">Số a:</string>
+    <string name="textview.text.number_second">Số b:</string>
+    <string name="button.text">Tổng 2 số</string>
+</resources>
