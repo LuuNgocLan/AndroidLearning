@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="textview.text.title_screen_1">Giải phương trình bậc nhất</string>
+    <string name="textview.text.title_a">Nhập số a:</string>
+    <string name="textview.text.title_b">Nhập số b:</string>
+    <string name="button.text.result">Kết quả</string>
+    <string name="textview.text.title_screen_2">Kết quả giải phương trình bậc nhất</string>
+    <string name="textview.text.result">Kết quả:</string>
+    <string name="button.text.back">Back</string>
+
+</resources>
