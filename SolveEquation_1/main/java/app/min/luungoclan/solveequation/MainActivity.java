@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtNumbera,edtNumberb;
     Button btnResult;
+    Float a,b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +26,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(checkError()){
-                    Float a = Float.parseFloat(edtNumbera.getText() + "");
-                    Float b = Float.parseFloat(edtNumberb.getText() + "");
-
-                    Intent myIntent = new Intent(MainActivity.this, ResultActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putFloat("numbera", a);
-                    bundle.putFloat("numberb", b);
-                    myIntent.putExtra("MyPackage", bundle);
-                    startActivity(myIntent);
+                    if(checkValidationData()){
+                        Intent myIntent = new Intent(MainActivity.this, ResultActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putFloat("numbera", a);
+                        bundle.putFloat("numberb", b);
+                        myIntent.putExtra("MyPackage", bundle);
+                        startActivity(myIntent);
+                    }
                 }
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart( ){
         super.onRestart();
-        getDataFromSharePreference();
+        getThenShowDataFromSharePreference();
         setDefaultData();
     }
 
@@ -53,8 +53,18 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+    private boolean checkValidationData(){
+        try{
+            a = Float.parseFloat(edtNumbera.getText() + "");
+            b = Float.parseFloat(edtNumberb.getText() + "");
+        }catch (NumberFormatException e){
+            Toast.makeText(this,"Dữ liệu nhập vào không hợp lệ! Bạn vui lòng nhập lại!",Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
 
-    private void getDataFromSharePreference(){
+    private void getThenShowDataFromSharePreference(){
         SharedPreferences sharedPreferences = getSharedPreferences("MyData",MODE_PRIVATE);
         Float numbera = sharedPreferences.getFloat("Numbera",0);
         Float numberb = sharedPreferences.getFloat("Numberb",0);
