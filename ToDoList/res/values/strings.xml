@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="textview.text.title">Quản lí công việc </string>
+    <string name="textview.text.cong_viec">Công việc:</string>
+    <string name="textview.text.noi_dung">Nội dung</string>
+    <string name="textview.text.ngay_ht">Ngày HT</string>
+    <string name="textview.text.gio_ht">Giờ HT</string>
+    <string name="button.text.date">Date</string>
+    <string name="button.text.time">Time</string>
+    <string name="button.text.them_CV">Thêm CV</string>
+    <string name="text.text.title_list">Danh sách công việc</string>
+
+</resources>
